@@ -12,20 +12,17 @@ Therefore only 12 and 7896 contain an even number of digits.
 
 public class EvenNoOfDigits 
 {
-    public static int findNumbers(int[] nums) {
-        int counter = 0, res = 0;
-        for (int i = 0; i < nums.length; i++) {
-            int x = nums[i];
-            while (x != 0) {
-                int digit = x % 10;
-                counter++;
-                x = x / 10;
-            }
-            if (counter % 2 == 0) {
+    public static int findNumbers(int[] nums) 
+    {
+        int res = 0;
+        for(int i = 0; i < nums.length; i++)
+        {
+            if(((int)Math.log10(nums[i])+1)%2==0)
+            {
                 res++;
             }
-        }
-        return res;
+        }    
+        return res;   
     }
 
     public static void main(String args[]) {
