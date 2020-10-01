@@ -25,7 +25,7 @@ Result table:
 Note that the result table has 13 columns (1 for the department id + 12 for the months).*/
 
 
-# Write your MySQL query statement below
+/*Write your MySQL query statement below*/
 select id,
 sum(case when month = 'Jan' then revenue else null end) as Jan_Revenue,
 sum(case when month = 'Feb' then revenue else null end) as Feb_Revenue,
